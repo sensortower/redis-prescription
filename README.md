@@ -41,7 +41,7 @@ script.eval(Redis.current, :xxx) # => 123
 
 ## Supported Ruby Versions
 
-This library aims to support and is [tested against][1] the following Ruby
+This library aims to support and is [tested against][travis-ci] the following Ruby
 versions:
 
 * Ruby 2.3.x
@@ -70,7 +70,7 @@ Then, run `bundle exec rake spec` to run the tests with ruby-rb client.
 To install this gem onto your local machine, run `bundle exec rake install`.
 To release a new version, update the version number in `version.rb`, and then
 run `bundle exec rake release`, which will create a git tag for the version,
-push git commits and tags, and push the `.gem` file to [rubygems.org][2].
+push git commits and tags, and push the `.gem` file to [rubygems.org][].
 
 
 ## Contributing
@@ -85,9 +85,10 @@ push git commits and tags, and push the `.gem` file to [rubygems.org][2].
 
 ## Copyright
 
-Copyright (c) 2018 SensorTower Inc.
-See LICENSE.md for further details.
+Copyright (c) 2018 SensorTower Inc.<br>
+See [LICENSE.md][] for further details.
 
 
-[1]: http://travis-ci.org/sensortower/redis-prescription
-[2]: https://rubygems.org
+[travis.ci]: http://travis-ci.org/ixti/redis-prescription
+[rubygems.org]: https://rubygems.org
+[LICENSE.md]: https://github.com/ixti/redis-prescription/blob/master/LICENSE.txt
