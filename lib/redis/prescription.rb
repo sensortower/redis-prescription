@@ -12,7 +12,7 @@ class Redis
   # @example Usage
   #
   #     script = Redis::Prescription.new("return ARGV[1] + ARGV[2]")
-  #     script.eval(Redis.current, :argv => [2, 2]) # => 2
+  #     script.eval(Redis.current, :argv => [2, 2]) # => 4
   class Prescription
     # Script load command.
     LOAD = "load"
