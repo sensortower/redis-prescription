@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ixti/redis-prescription.svg?branch=master)](https://travis-ci.org/ixti/redis-prescription)
 [![codecov](https://codecov.io/gh/ixti/redis-prescription/branch/master/graph/badge.svg)](https://codecov.io/gh/ixti/redis-prescription)
+[![Code Climate](https://codeclimate.com/github/ixti/redis-prescription/badges/gpa.svg)](https://codeclimate.com/github/ixti/redis-prescription)
 [![Inline docs](http://inch-ci.org/github/ixti/redis-prescription.svg?branch=master)](http://inch-ci.org/github/ixti/redis-prescription)
 
 Redis LUA stored procedure runner. Preloads (and reloads when needed, e.g. when
