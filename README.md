@@ -1,9 +1,9 @@
 # Redis::Prescription
 
-[![Build Status](https://travis-ci.org/ixti/redis-prescription.svg?branch=master)](https://travis-ci.org/ixti/redis-prescription)
-[![codecov](https://codecov.io/gh/ixti/redis-prescription/branch/master/graph/badge.svg)](https://codecov.io/gh/ixti/redis-prescription)
-[![Code Climate](https://codeclimate.com/github/ixti/redis-prescription/badges/gpa.svg)](https://codeclimate.com/github/ixti/redis-prescription)
-[![Inline docs](http://inch-ci.org/github/ixti/redis-prescription.svg?branch=master)](http://inch-ci.org/github/ixti/redis-prescription)
+[![Build Status](https://travis-ci.org/sensortower/redis-prescription.svg?branch=master)](https://travis-ci.org/sensortower/redis-prescription)
+[![codecov](https://codecov.io/gh/sensortower/redis-prescription/branch/master/graph/badge.svg)](https://codecov.io/gh/sensortower/redis-prescription)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c816417574c1b8b64d81/maintainability)](https://codeclimate.com/github/sensortower/redis-prescription/maintainability)
+[![Inline docs](http://inch-ci.org/github/sensortower/redis-prescription.svg?branch=master)](http://inch-ci.org/github/sensortower/redis-prescription)
 
 Redis LUA stored procedure runner. Preloads (and reloads when needed, e.g. when
 scripts were flushed away) script and then runs it with `EVALSHA`.
@@ -90,6 +90,6 @@ Copyright (c) 2018 SensorTower Inc.<br>
 See [LICENSE.md][] for further details.
 
 
-[travis.ci]: http://travis-ci.org/ixti/redis-prescription
+[travis.ci]: http://travis-ci.org/sensortower/redis-prescription
 [rubygems.org]: https://rubygems.org
-[LICENSE.md]: https://github.com/ixti/redis-prescription/blob/master/LICENSE.txt
+[LICENSE.md]: https://github.com/sensortower/redis-prescription/blob/master/LICENSE.txt

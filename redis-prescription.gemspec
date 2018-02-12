@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
     were flushed away) script and then runs it with `EVALSHA`.
   DESCRIPTION
 
-  spec.homepage      = "https://github.com/ixti/redis-prescription"
+  spec.homepage      = "https://github.com/sensortower/redis-prescription"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|

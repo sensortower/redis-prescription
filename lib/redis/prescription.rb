@@ -30,6 +30,7 @@ class Redis
     # @return [String]
     attr_reader :digest
 
+    # Create a new Prescription instance.
     # @param source [#to_s] Lua script.
     def initialize(source)
       @source = source.to_s.strip.freeze
