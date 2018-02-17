@@ -34,11 +34,6 @@ RSpec.describe Redis::Prescription do
       prescription.bootstrap!(Redis::Namespace.new(:xxx, :redis => REDIS))
     end
 
-    it "fails with invalid client" do
-      expect { prescription.bootstrap!(double) }.
-        to raise_error(TypeError, %r{Unsupported redis client type:})
-    end
-
     context "when server returns unexpected script digest" do
       before { prescription.instance_variable_set(:@digest, "xxx") }
 
@@ -89,10 +84,5 @@ RSpec.describe Redis::Prescription do
       expect(prescription.eval(REDIS, :keys => %i[abc], :argv => [57])).
         to eq(99)
     end
-  end
-
-  it "fails with invalid client" do
-    expect { prescription.bootstrap!(double) }.
-      to raise_error(TypeError, %r{Unsupported redis client type:})
   end
 end

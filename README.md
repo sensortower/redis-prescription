@@ -42,12 +42,20 @@ script.eval(Redis.current, :xxx) # => 123
 
 ## Supported Ruby Versions
 
-This library aims to support and is [tested against][travis-ci] the following Ruby
-versions:
+This library aims to support and is [tested against][travis-ci] the following
+Ruby and Redis client versions:
 
-* Ruby 2.3.x
-* Ruby 2.4.x
-* Ruby 2.5.x
+* Ruby
+  * 2.3.x
+  * 2.4.x
+  * 2.5.x
+
+* [redis-rb](https://github.com/redis/redis-rb)
+  * 4.x
+
+* [redis-namespace](https://github.com/resque/redis-namespace)
+  * 1.6
+
 
 If something doesn't work on one of these versions, it's a bug.
 

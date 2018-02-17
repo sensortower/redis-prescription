@@ -38,10 +38,11 @@ class Redis
     end
 
     # Loads script to redis.
-    # @param redis (see #namespaceless)
+    # @param redis [Redis, Redis::Namespace, #redis]
     # @return [void]
     def bootstrap!(redis)
-      digest = namespaceless(redis).script(LOAD, @source)
+      redis  = redis.redis if redis.respond_to? :redis
+      digest = redis.script(LOAD, @source)
       return if @digest == digest
 
       # XXX: this may happen **ONLY** if script digesting will be
@@ -53,7 +54,7 @@ class Redis
     end
 
     # Executes script and returns result of execution.
-    # @param redis (see #namespaceless)
+    # @param redis [Redis, Redis::Namespace, #redis]
     # @param keys [Array] keys to pass to the script
     # @param argv [Array] arguments to pass to the script
     # @return depends on the script
@@ -71,21 +72,6 @@ class Redis
     # @return [Prescription]
     def self.read(file)
       new File.read file
-    end
-
-    private
-
-    # Yields real namespace-less redis client.
-    # @param redis [Redis, Redis::Namespace]
-    # @return [Redis]
-    def namespaceless(redis)
-      if redis.is_a?(Redis)
-        redis
-      elsif defined?(Redis::Namespace) && redis.is_a?(Redis::Namespace)
-        redis.redis
-      else
-        raise TypeError, "Unsupported redis client type: #{redis.class}"
-      end
     end
   end
 end

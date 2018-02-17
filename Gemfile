@@ -7,8 +7,7 @@ gem "rake"
 gem "rspec"
 gem "rubocop", "~> 0.52.0", :require => false
 
-gem "redis"
-gem "redis-namespace"
+gem "redis-namespace", "~> 1.6"
 
 group :development do
   gem "guard",         :require => false
