@@ -19,19 +19,11 @@ RSpec.describe Redis::Prescription do
 
   describe "#bootstrap!" do
     it "loads LUA script to redis" do
-      expect(REDIS).to receive(:script).
-        with("load", lua_script).once.
+      expect(REDIS_CONNECTION).to receive(:script).
+        with("LOAD", lua_script).once.
         and_call_original
 
       prescription.bootstrap!(REDIS)
-    end
-
-    it "works with Redis::Namespace" do
-      expect(REDIS).to receive(:script).
-        with("load", lua_script).once.
-        and_call_original
-
-      prescription.bootstrap!(Redis::Namespace.new(:xxx, :redis => REDIS))
     end
 
     context "when server returns unexpected script digest" do
@@ -52,14 +44,6 @@ RSpec.describe Redis::Prescription do
   end
 
   describe "#eval" do
-    it "works with Redis::Namespace" do
-      namespaced = Redis::Namespace.new(:deadbeef, :redis => REDIS)
-      namespaced.set(:xyz, 123)
-
-      result = prescription.eval(namespaced, :keys => %i[xyz], :argv => [321])
-      expect(result).to eq(444)
-    end
-
     it "bootstraps only when needed" do
       expect(prescription).
         to receive(:bootstrap!).once.
@@ -79,7 +63,7 @@ RSpec.describe Redis::Prescription do
       expect(prescription.eval(REDIS, :keys => %i[abc], :argv => [27])).
         to eq(69)
 
-      REDIS.script("flush")
+      REDIS_CONNECTION.script("flush")
 
       expect(prescription.eval(REDIS, :keys => %i[abc], :argv => [57])).
         to eq(99)

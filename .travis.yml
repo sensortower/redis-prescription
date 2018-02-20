@@ -6,6 +6,10 @@ services:
 
 cache: bundler
 
+env:
+  - REDIS_NAMESPACE="wtf"
+  - REDIS_NAMESPACE=""
+
 rvm:
   - 2.3
   - 2.4
