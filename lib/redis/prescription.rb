@@ -15,7 +15,7 @@ class Redis
   #     script.eval(Redis.current, :argv => [2, 2]) # => 4
   class Prescription
     # Script load command.
-    LOAD = "load"
+    LOAD = "LOAD"
     private_constant :LOAD
 
     # Redis error fired when script ID is unkown.
@@ -60,7 +60,7 @@ class Redis
     # @return depends on the script
     def eval(redis, keys: [], argv: [])
       redis.evalsha(@digest, keys, argv)
-    rescue => e
+    rescue Redis::CommandError => e
       raise unless e.message.include? NOSCRIPT
 
       bootstrap!(redis)
