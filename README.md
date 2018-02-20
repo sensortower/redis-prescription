@@ -84,7 +84,7 @@ push git commits and tags, and push the `.gem` file to [rubygems.org][].
 
 ## Contributing
 
-* Fork sidekiq-throttled on GitHub
+* Fork redis-prescription on GitHub
 * Make your changes
 * Ensure all tests pass (`bundle exec rake`)
 * Send a pull request
