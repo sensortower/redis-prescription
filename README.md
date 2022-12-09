@@ -49,6 +49,10 @@ Ruby and Redis client versions:
   * 2.3.x
   * 2.4.x
   * 2.5.x
+  * 2.6.x
+  * 2.7.x
+  * 3.0.x
+  * 3.1.x
 
 * [redis-rb](https://github.com/redis/redis-rb)
   * 4.x
