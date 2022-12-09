@@ -60,7 +60,7 @@ class Redis
     # @return depends on the script
     def eval(redis, keys: [], argv: [])
       redis.evalsha(@digest, keys, argv)
-    rescue Redis::CommandError => e
+    rescue StandardError => e
       raise unless e.message.include? NOSCRIPT
 
       bootstrap!(redis)
