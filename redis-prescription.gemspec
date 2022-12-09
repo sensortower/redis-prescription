@@ -30,5 +30,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.16"
 
-  spec.required_ruby_version = "~> 2.3"
+  spec.required_ruby_version = ">= 2.7"
 end
