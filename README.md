@@ -1,3 +1,5 @@
+# ⚠️ NOTE: This project is now officially maintained [here](https://gitlab.com/ixti/redis-prescription/) ⚠️
+
 # Redis::Prescription
 
 [![Build Status](https://travis-ci.org/sensortower/redis-prescription.svg?branch=master)](https://travis-ci.org/sensortower/redis-prescription)
